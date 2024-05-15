@@ -1,0 +1,721 @@
+
+    /* <weight>: Use a value from 300 to 800 */
+
+ *{
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+html {
+    font-size: 70%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 4.5rem;
+    color: orangered;
+}
+
+.heading span{
+    position: relative;
+    z-index: 0;
+    color: black;
+}
+
+.heading span::before {
+    content: '';
+    position: absolute;
+    bottom: 1rem; left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: orangered;
+    clip-path: polygon(0 90%, 100% 80%, 100% 100%, 0% 100%);
+}
+/* ----------------------------- HEADER CSS ----------------------------------------------- */
+
+.btn {
+    display: inline-block;
+    margin-top: 2rem;
+    border-radius: .5rem;
+    border-color: orangered;
+    height: 4.3rem;
+    background: orangered;
+    color: black;
+    font-weight: 700;
+    font-size: 1.7 rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.btn a{
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+    padding-top: .8rem 3rem;
+    padding-bottom: .8rem 3rem;
+    text-transform: uppercase;
+}
+
+
+.btn:hover {
+    background-color: rgb(255, 140, 0);
+}
+
+.Header{
+    position: fixed;
+    left: 0; right: 0; top: 0;
+    z-index: 999;
+    display: flex;
+    background-color: antiquewhite;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+.Header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: black;
+    text-decoration-line: none;
+    padding-right: 20px;
+}
+
+.Header .logo span{
+    color: orangered;
+    font-weight: 800;
+}
+/* ----------------------------- HEADER DROPDOWN MENU ----------------------------------------------- */
+
+.Header .navbar a{
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin: 0 1rem;
+    color: orangered;
+    text-decoration-line: none;
+}
+
+.Header .navbar a:hover{
+    color: black;
+}
+ 
+.Header .btn {
+    margin-top: 0;
+}
+
+.Header #login-btn i{
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-drop{
+    display: none;
+    font-size: 2.5rem;
+    color: black;
+    cursor: pointer;
+}
+
+.menu-drop:hover {
+    color: orangered;
+}
+
+.open-menu {
+    color: orangered;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+body {
+    height: 300rem;
+}
+
+.Header.active {
+    box-shadow: 10px 5px 5px grey;
+    padding: 2rem 9%;
+}
+
+/* ----------------------------- Login Form ----------------------------------------------- */
+
+.login-form-container {
+    position: fixed;
+    top:-105%; left:0;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background: rgba(255,255,255, .8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+input {
+    display: block;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    height: 0px;
+    width: 200px;
+    padding-top: 0px;
+    padding-bottom:40px ;
+}
+
+.Socials {
+    height: 40px;
+    width: 40px;
+}
+
+.login-form-container.active {
+    top: 0%;
+    opacity: 1;
+}
+
+.login-form-container form{
+    padding: 2rem;
+    margin:2rem;
+    border-radius: .5rem;
+    box-shadow: 5px 5px 5px grey;
+    background: white;
+    border: 2cm;
+}
+
+.login-form-container form h3{
+    text-align: center;
+    color: orangered;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.login-form-container form .Box{
+    margin: .7rem 0;
+    width: 100%;
+    color: Black;
+    font-size: 1.6rem;
+    padding: .5rem;
+}
+
+.login-form-container form p{
+    font-size: 2rem;
+}
+
+.login-form-container #close-login-form {
+    position: absolute;
+    top: 1.5rem; right: 2.5rem;
+    font-size: 5rem;
+    font-weight: 800;
+    color: black;
+    cursor: pointer;
+}
+
+/* ----------------------------- HOME CSS ----------------------------------------------- */
+
+.home {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    overflow-x: hidden;
+
+}
+
+.home h1 {
+    font-size: 7.5vw;
+    
+    font-weight: 700;
+    color: orangered;
+}
+
+.home img{
+    width: 100%;
+}
+
+/* -------------------------- ICONS SECTION ------------------------------------------- */
+
+.icons-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+    gap: 1.5rem;
+    background-color: whitesmoke;
+}
+
+.icons-container .icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: white;
+    box-shadow: 10px 5px 5px grey;
+    border-radius: .5rem;
+}
+
+.icons-container .icons i {
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    background: #eee;
+    color: navy;
+    text-align: center;
+}
+
+.icons-container .icons .content h3 {
+    color: orangered;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.icons-container .icons .content p {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.icons-container .icons:hover{
+    background: orange;
+}
+
+/* -------------------------- Vehicle Popular------------------------------------------ */
+
+.vehicle .vehicle-slider {
+    padding-bottom: 5rem;
+}
+
+.vehicle .vehicle-slider .box{
+    text-align: center;
+    width: 30rem;
+}
+
+.vehicle .vehicle-slider .box img{
+    width: 100%;
+    height: 400px;
+    opacity: .5;
+    transform: scale(.8); 
+
+}
+.vehicle .vehicle-slider .box img:hover{
+     opacity: 1;
+    transform: scale(1); 
+}
+.vehicle .vehicle-slider .swiper-slide-active img{
+    opacity: 1;
+    transform: scale(1); 
+}
+.vehicle .vehicle-slider .box .content {
+     transform: scale(0); 
+    padding-top: 1rem;
+}
+
+.vehicle .vehicle-slider .swiper-slide-active .content{
+    transform: scale(1);
+}
+.vehicle .vehicle-slider .box .content h3{
+    font-size: 2rem;
+
+}
+.vehicle .vehicle-slider .box .content .price{
+    font-size: 2.5rem;
+    color: orangered;
+    padding: 1rem 0;
+    font-weight: bolder;
+}
+
+.vehicle .vehicle-slider .box .content .price{
+    font-size: 2.5rem;
+    color: orangered;
+    padding: 1rem 0;
+    font-weight: bolder;
+}
+.vehicle .vehicle-slider .box .content span{
+    font-size: 1.7rem;
+    color: black;
+    font-weight: normal;
+}
+
+.vehicle .vehicle-slider .box .content p {
+    font-size: 1.7rem;
+    padding: 1rem;
+    padding-top: 1.5;
+    border-top: groove lightgray;
+    color: gray;
+}
+.vehicle .vehicle-slider .box .content p span{
+    color: orange;
+    font-size: .8;
+    padding: 0 .5; }
+
+/* -------------------------- Services Section ------------------------------------------ */
+.services .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 1.5rem;
+    padding: 2rem 9%;
+}
+.services .box-container .box{
+    text-align: center;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 10px 5px 5px grey;
+    border: groove lightgray;
+}
+
+.services .box-container .box i{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-size: 3rem;
+    background: orangered;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.services .box-container .box h3{
+    font-size: 2.2rem;
+}
+.services .box-container .box p{
+    color: gray;
+    font-size: 1.2rem;
+}
+.services .box-container .box:hover{
+    background-color: lightgray;
+}
+
+.services .box-container .box:hover p{
+    color: orangered;
+}
+/* -------------------------- Featured Cars ------------------------------------------ */
+.featured {
+    padding: 2rem 8.5%;
+}
+.featured .featured-slider {
+    /* padding: 1rem; */
+    padding-bottom: 4rem;
+    padding: 2rem 2.1%;
+    width: 100%;
+
+}
+.featured-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+    gap: 1.5rem;
+}
+
+.featured .featured-slider .box {
+    text-align: center;
+    padding-bottom: 2rem;
+    box-shadow: 10px 5px 5px grey;
+    border: groove lightgray;
+    border-radius: .5rem;
+
+    
+
+}
+
+.featured .featured-slider .box img {
+    height: 15rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+
+}
+
+.featured .featured-slider .box:hover img {
+    transform: scale(.9);
+}
+
+.featured .featured-slider .box h3 {
+    font-size: 2.2rem;
+}
+
+.featured .featured-slider .box .stars {
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: orange;
+}
+.featured .featured-slider .box .price {
+    font-size: 2.5rem;
+    color: black;
+}
+/* -------------------------- newsletter Section ------------------------------------------ */
+.newsletter {
+    padding: 6rem ;
+    text-align: center;
+    background: url(../images/news-background.png) no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.486);
+    background-blend-mode: overlay;
+    background-size: 100%;
+    background-blend-mode: overlay;
+}
+
+.newsletter h3 {
+    color: navy;
+    font-size: 3rem;
+    
+}
+
+.newsletter p{
+    color: black;
+    font-size: 1.5rem;
+}
+
+.newsletter form{
+    margin: 1rem auto;
+    max-width: 60rem;
+    height: 5rem;
+    display: flex;
+    box-shadow: 10px 5px 5px grey;
+    overflow: hidden;
+    border-radius: 5rem;
+}
+
+.newsletter form input[type="email"]{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    text-transform: none;
+    padding:0 2rem;
+}
+
+.newsletter form input[type="submit"]{
+    height: 100%;
+    width: 17rem;
+    font-size: 1.6rem;
+    background: orange;
+}
+
+.newsletter form input[type="submit"]:hover{
+    color: orangered;
+}
+
+/* -------------------------- Reviews Section ------------------------------------------ */
+.reviews {
+    padding: 2rem 9%;
+}
+.reviews .reviews-slider {
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.reviews .reviews-slider .box{
+    padding: 2rem 1.7px;
+    margin: 2rem 0;
+    width: 100%;
+    text-align: center;
+    opacity: .4;
+    transform: scale(.9);
+}
+
+.reviews .reviews-slider .swiper-slide-active{
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 5px 5px 5px grey;
+}
+
+.reviews .reviews-slider .box img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.reviews .reviews-slider .box .content p {
+    font-size: 1.5rem;
+    color: gray;
+    padding: 1rem 0;
+}
+
+.reviews .reviews-slider .box .content h3 {
+    font-size: 2.2rem;
+    color: black;
+}
+
+.reviews .reviews-slider .box .content .stars i{
+    font-size: 1.7rem;
+    color: orange;
+    margin-bottom: 2rem;
+}
+
+/* -------------------------- Contact Section ------------------------------------------ */
+.contact {
+    padding: 2rem 9%;
+}
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact .row .map {
+    flex: 1 1 42rem;
+    width: 100%;
+    border: groove lightgray;
+    border-radius: 1;
+
+}
+
+.contact .row form {
+    flex: 1 1 42rem;
+    padding: 1.5rem;
+    border: groove lightgray;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.contact .row form h3{
+    font-size: 3rem;
+    color: orangered;
+}
+
+.contact .row form .box{
+    margin: .7rem 0;
+    width: 100%;
+    border: solid lightgray;
+    font-size: 1.6rem;
+    color: lightgray;
+    border-radius: .5rem;
+}
+
+.contact .row form textarea {
+    height: 15rem;
+    resize: none;
+}
+/* -------------------------- Footer Section ------------------------------------------ */
+.footer {
+    background-color: antiquewhite;
+    
+}
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.footer .box-container .box h3 {
+    color: black;
+    font-size: 2.2rem;
+}
+
+.footer .box-container .box a {
+    color: gray;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    display: block;
+}
+
+.footer .box-container .box a:hover {
+    color: orange;
+}
+/* -------------------------- Phone Device ------------------------------------------ */
+
+/* media queries */
+@media (min-width:1000px) {
+    html{
+        font-size: 70%;
+    } 
+
+    .Header{
+        padding: 2rem;
+    }
+}
+
+@media (max-width:1000px) {
+    html{
+        font-size: 60%;
+    } 
+
+    .Header{
+        padding: 2rem;
+    }
+    
+}
+
+@media (max-width:800px) {
+    html{
+        font-size: 50%;
+    } 
+
+    @keyframes rotate {
+        0% { transform: rotate(-180deg); }
+        100% { transform: rotate(180deg); }
+    }
+
+    .menu-drop{
+        display: block;
+        font-weight: 600;
+    }
+
+    .menu-drop.animate {
+        animation: rotate 1s;
+    }
+
+    .Header #login-btn i{
+        display: block;
+    }
+
+    .Header #login-btn .btn{
+        display: none;
+    }
+
+    .Header .navbar {
+        position: absolute;
+        top:99%; left:0%; right:0;
+        background: white;
+        border-top: antiquewhite;
+        display: none;
+    }
+
+    .Header .navbar a{
+        display: block;
+        margin: 2rem;
+        font-size: 2rem;
+    }
+
+    .navbar.open-menu {
+        display: block;
+    }
+
+    .Header.active {
+        box-shadow: 10px 5px 5px grey;
+        padding: 2rem 9%;
+    }
+
+    .btn a{
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+    padding-top: .8rem 3rem;
+    padding-bottom: .8rem 3rem;
+    }
+}
+
+@media (max-width:400px) {
+    html {
+        font-size: 50%;
+    } 
+
+    .btn {
+        height: 4rem;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+}
